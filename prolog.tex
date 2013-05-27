@@ -1,5 +1,5 @@
 % Page heads
-\markboth{G. Zhou et al.}{A Multifrequency MAC Specially Designed for WSN Applications}
+\markboth{Luba Tang, et al.}{MCLinker: A Linker Framework for On-Device Linking}
 
 % Title portion
 \title{MCLinker: A Linker Framework for On-Device Linking}
@@ -12,3 +12,25 @@
 %       So for example, Mr. Abdelzaher, the bulk of the research was done at UIUC, and he is
 %       currently affiliated with NASA.
 
+\begin{abstract}
+This paper describes MCLinker (Mobile Computing Linker), a linker framework designed for mobile devices. Diversity of mobile platforms challenges linkers to support variant relocation models and special layout. One of MCLinker's contribution is to define an common abstraction of rich but fragmented mobile device. Additionally, mobile devices usually have limited computation, memory size and power. MCLinker has delicated linking algorithms and can run very fast on such limited devices with small memory usage. Furthermore, MCLinker provides a target-independent representation of program modules for general analysis and transformation. The MCLinker framework, fast algorithms and module representation together provide the capacity for throughout program analysis and transformation. To our best knowledge, MCLinker is the first linker provides all these capacities. We describe the design of MCLinker framework, algorithms and representations and evaluate the design in ways: (a) linking performance (b) the size	and effectiveness of the represenation, and (c) the apparently smaller lines of code and richer target platforms. In our experiments, MCLinker runs steadily 100\% faster than GNU ld, and 30\% faster than the Google gold linker. MCLinker spends less time to handle symbols and relocations with smaller memory usage. MCLinker's lines of code are only 20\% of GNU ld's and 50\% of the Google gold linker's. Although GNU ld supports more legendary devices, MCLinker has already supported more target platforms than the Google gold linker.
+\end{abstract}
+
+\category{D.3.4}{Programming Languages}{Processors}[Run-time environments]
+\category{D.4.9}{Operating Systems}{Systems Programs and Utilities}[Linkers]
+
+\terms{Design, Algorithms, Performance}
+
+\keywords{linker, intermediate representation, link time optimization}
+
+\acmformat{Luba Tang, 2013. MCLinker: A Linker Framework for On-Device Linking.}
+% At a minimum you need to supply the author names, year and a title.
+% IMPORTANT:
+% Full first names whenever they are known, surname last, followed by a period.
+% In the case of two authors, 'and' is placed between them.
+% In the case of three or more authors, the serial comma is used, that is, all author names
+% except the last one but including the penultimate author's name are followed by a comma,
+% and then 'and' is placed before the final author's name.
+% If only first and middle initials are known, then each initial
+% is followed by a period and they are separated by a space.
+% The remaining information (journal title, volume, article number, date, etc.) is 'auto-generated'.
