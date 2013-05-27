@@ -1,8 +1,8 @@
 % Page heads
-\markboth{Luba Tang, et al.}{MCLinker: A Linker Framework for On-Device Linking}
+\markboth{Luba Tang, et al.}{MCLinker: A Linker Framework for Global System Analysis and Optimization}
 
 % Title portion
-\title{MCLinker: A Linker Framework for On-Device Linking}
+\title{MCLinker: A Linker Framework for \\ Global System Analysis and Optimization}
 \author{LUBA TANG
 \affil{National Tsing Hua University, Taiwan}}
 % NOTE! Affiliations placed here should be for the institution where the
@@ -12,18 +12,17 @@
 %       So for example, Mr. Abdelzaher, the bulk of the research was done at UIUC, and he is
 %       currently affiliated with NASA.
 
-\begin{abstract}
-This paper describes MCLinker (Mobile Computing Linker), a linker framework designed for mobile devices. Diversity of mobile platforms challenges linkers to support variant relocation models and special layout. One of MCLinker's contribution is to define an common abstraction of rich but fragmented mobile device. Additionally, mobile devices usually have limited computation, memory size and power. MCLinker has delicated linking algorithms and can run very fast on such limited devices with small memory usage. Furthermore, MCLinker provides a target-independent representation of program modules for general analysis and transformation. The MCLinker framework, fast algorithms and module representation together provide the capacity for throughout program analysis and transformation. To our best knowledge, MCLinker is the first linker provides all these capacities. We describe the design of MCLinker framework, algorithms and representations and evaluate the design in ways: (a) linking performance (b) the size	and effectiveness of the represenation, and (c) the apparently smaller lines of code and richer target platforms. In our experiments, MCLinker runs steadily 100\% faster than GNU ld, and 30\% faster than the Google gold linker. MCLinker spends less time to handle symbols and relocations with smaller memory usage. MCLinker's lines of code are only 20\% of GNU ld's and 50\% of the Google gold linker's. Although GNU ld supports more legendary devices, MCLinker has already supported more target platforms than the Google gold linker.
-\end{abstract}
+\input{abstract}
 
-\category{D.3.4}{Programming Languages}{Processors}[Run-time environments]
+\category{D.3.4}{Programming Languages}{Processors}[Code generation; Compilers; Run-time environments]
 \category{D.4.9}{Operating Systems}{Systems Programs and Utilities}[Linkers]
+\category{F.3.2}{Logics and Meanings of Programs}{Semantics of Programming Languages}[Program analysis]
 
-\terms{Design, Algorithms, Performance}
+\terms{Performance, Experimentation}
 
 \keywords{linker, intermediate representation, link time optimization}
 
-\acmformat{Luba Tang, 2013. MCLinker: A Linker Framework for On-Device Linking.}
+\acmformat{Luba Tang, 2013. MCLinker: A Linker Framework for Global System Analysis and Optimization.}
 % At a minimum you need to supply the author names, year and a title.
 % IMPORTANT:
 % Full first names whenever they are known, surname last, followed by a period.
