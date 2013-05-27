@@ -1,0 +1,11 @@
+\section{Introduction}
+
+The rapid growth of the mobile devices cause platforms to be fragmented. Many custom versions of software platforms coexist with the original one. Applications that built for one platform might not work on the others. In order to avoid the fragmentation problem, applications have to be distributed by source code or byte code. Compilation and linking of applications are defered until the applications have been downloaded on devices.
+
+There are two trents of on-device compilation and linking. One is GPGPU computing. Different GPUs have different instruction sets and memory configurations. In order to guarantee programs behave consistently on different GPUs, kernel functions usually distributed by source code. Compliation and linking are defered until either first loading time or installation time.
+
+The other is ahead-of-time (AOT) virtual machines. AOT compiled programs can drop considerable fraction of runtime overhead, that is, saving disk space, memory and starting time. However, different processors many have different sub-ISAs. For example, Marvell ARM has MMX and some ARM versions might not have NEON or VFP. In order to fully utilze processor's computation power, platform vendors must provide its own version AOT compiler and build programs on devices.
+
+This paper describes MCLinker (Mobile Computing Linker), a linker framework designed for on-device linking. There are two main challenges of on-device linking. One is to support rich but fragmented platforms. Every platform has a special relocation model, a unique layout and different object format. MCLinker provides an unified abstraction of software modules for variant platforms. The other challenge is high linking performance. Mobile devices usually have limited computation power and memory size. MCLinker is designed to perform well even on such limited platforms. MCLinker has the capacity to trade linking time for output's runtime quality. MCLinker archives this through two parts (a) an unified intermediate representation (IR) of modules that can be adopted by variant platforms; and (b) a linker design that exploits this representation to provides fast and compact linking algorithms.
+
+
